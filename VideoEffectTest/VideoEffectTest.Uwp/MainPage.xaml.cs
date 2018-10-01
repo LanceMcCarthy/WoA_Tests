@@ -39,10 +39,7 @@ namespace VideoEffectTest.Uwp
             await ApplyVideoEffectAsync();
         }
         
-        private void SelectedEffectSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
-        {
-            UpdateVideoEffectPropertyValue(e.NewValue);
-        }
+        private void SelectedEffectSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e) => UpdateVideoEffectPropertyValue(e.NewValue);
 
         private async void ClearEffectButton_OnClick(object sender, RoutedEventArgs e)
         {
@@ -51,10 +48,8 @@ namespace VideoEffectTest.Uwp
             PageViewModel.SelectedEffect = null;
         }
         
-        private async void ReloadVideoStreamButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            await InitializeVideoAsync();
-        }
+        private async void ReloadVideoStreamButton_OnClick(object sender, RoutedEventArgs e) => await InitializeVideoAsync();
+        
 
         #endregion
 
